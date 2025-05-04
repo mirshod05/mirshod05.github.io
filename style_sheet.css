@@ -1,0 +1,321 @@
+/* GENERAL STYLING */
+
+html, body {
+    min-height: 100vh;
+  }
+
+/* Created a half and half backkground (blue and red), tiling image that repeats vertically on the left */
+body{
+    margin: 0 15%;
+    padding: 0;
+    background: 
+        url(images/logo_transparent.png),
+        linear-gradient(to right, rgba(2, 2, 74, 0.995) 50%, rgba(71, 3, 3, 0.901) 50%);
+    
+    background-repeat: 
+        repeat-y,
+        no-repeat;
+    font-family: "PlayFair Display";
+
+    background-size: 
+        70px 70px,
+        100% 100%;
+}
+
+h1 {
+    text-align: center;
+    font: bold 2em "Farro";
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    margin-top: 30px;
+    color: darkblue;
+}
+
+h2 {
+    clear: both;
+    color: darkblue;
+}
+
+footer{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    background-color: white;
+    border: 2px dotted black;
+}
+
+/* Everything in "container" has a different background, to avoid clash with background (from bootstrap)*/
+.container{
+    background-color: #dbba00f8;
+    padding: 1.5em;
+    min-height: 100vh;
+}
+
+/* Edited navigation bar to make it flexbox */
+nav {
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    max-width: 95%;
+
+    font-family: "Garamond";
+    font-size: 1.5em;
+}
+
+nav a {
+    display: block;
+    border: 1px solid #d4af37;
+    border-radius: .5em;
+    padding: .5em .5em;
+    margin: 2em .2em;
+
+    background-color: #c9ac09cc;
+    color: darkblue;
+    text-decoration: none;
+}
+
+/* Link turns different color when hovering */
+a:hover {
+    color:rgb(65, 12, 100);
+}
+
+p {
+    font-size: 1.2em;
+}
+
+
+/* MAIN PAGE */
+
+/* Flexbox display for images in gallery, all show up side to side */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery img{
+    max-width: 100%;
+    height: auto;
+    width: 450px;
+}
+
+.main p{
+    font-family: "Permanent Marker";
+    font-size: 1.4em;
+}
+
+/* HISTORY PAGE */
+/* Flexbox display for 3 column layout container (done with bootstrap) */
+
+.row h2{
+    border: 2px dashed darkred;
+    border-radius: .35em;
+}
+
+.first_col{
+    width: 35%;
+}
+.second_col{
+    width:30%;
+}
+.third_col{
+    width:35%;
+    justify-content: center;
+}
+
+.second_col img{
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 1em;
+    border-radius: .5em;
+}
+
+/* SQUAD PAGE */
+img[src*="squad_pic"] {
+    float: right;
+}
+
+/* Caption for squad_pic floats right like image itself */
+figure {
+    float: right;
+}
+
+figcaption {
+    text-align: center;
+}
+
+/* List floats left */
+ul {
+    float: left;
+}
+
+ul li{
+    font-size: 1.1em;
+    font-family: "Farro";
+    margin-bottom: .5em;
+}
+
+/* ACHIEVEMENTS PAGE */
+/* 3 column layout, flexbox container (done with bootstrap) */
+.row {
+    border: 3px dashed darkblue;
+}
+
+.row ol li{
+    font-family: "Papyrus";
+    font-size: 1.2em;
+    text-decoration:dashed;
+    color: darkred;
+    font-weight: bold;
+}
+
+.col1{
+    width: 33%;
+}
+.col2{
+    width:34%;
+}
+.col3{
+    width:33%;
+    justify-content: center;
+} 
+
+/* Styling for table, and image inside table */
+td, th { border: 2px solid darkblue; }
+table { 
+    border: 2px solid black; 
+    width: 95%;
+}
+
+table img{
+    width: 60%;
+    height: auto;
+    margin-top: .5em;
+}
+
+/* Additional styling for h3 in achievements page, has a round border that is dashed */
+h3 {
+    font-family: "Farro";
+    color: darkblue;
+    margin-top: 2em;
+    padding: 1em;
+    border: dashed 4px darkblue;
+    border-radius: 25px;
+
+    border-top: 1px solid;
+    border-left: 3px solid;
+    padding-left: 1em;
+
+    max-width: 60%;
+}
+
+/* ICONIC QUOTES PAGE */
+
+/* Implemented flex display in quotes section */
+#quotes {
+    border: 3px solid #222955;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+q {
+    font-size: 1.5em;
+    font-family:papyrus;
+    color: gold;
+    max-width: 50%;
+    padding: 1.5em 2em;
+    margin: 5px 0;
+    background-color:rgba(0, 56, 186, 0.782);
+}
+
+/* Images are flexbox and are stacked in a column */
+.quote_img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 35%;
+    width: 60%;
+}
+
+
+/* GIVEAWAYS PAGE */
+/* Form fieldsets have black border */
+fieldset{
+    border-color: black;
+}
+
+/* ABOUT ME PAGE */
+img[src*="barca_jersey"] {
+    float: right;
+    shape-outside: auto;
+    -webkit-shape-outside: auto;
+    shape-margin: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: auto;
+}
+
+/* Responsive web design styling*/
+/* Some fonts grow bigger when screen is larger, more spacing */
+
+
+/* When the screen size is smaller than 800px nav block changes to a list,
+and other components get smaller (font, list, headers) */
+@media screen and (max-width: 800px) {
+    nav {
+        display: block;
+        margin-top: 2em;
+        font-family: cursive;
+        font-style: italic;
+        font-size: .75em;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 2em;
+    }
+    p{
+        font-size:.8em;
+    }
+    q{
+        font-size:.8em;
+    }
+
+    ul li{
+        font-size: smaller;
+    }
+
+    ol li{
+        font-size: .8em;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    nav ul li {
+        flex: none;
+    }
+    nav ul {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    img {
+        float: top;
+        margin: 0 1em 1em 0;
+    }
+}
+
+
+
+
